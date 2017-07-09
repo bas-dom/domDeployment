@@ -1,2 +1,55 @@
-# domDeployment
-deployment for backend of cloud platform
+# 基本要素 #
+一套最精简的后台部署中，至少需要以下如下核心元素及各要素承担的职责。
+
+## mainService server ##
+与管理前端及展示前端适配的后台服务，基本以Restful API方式构架，基于Flask实现。
+
+在生产环境中需同时配套gunicorn及nginx优化并发性能，满足未来的可能大并发场景。
+
+由于mainService需频繁访问缓存，因此为了节约系统资源、尽量提升接口效率，redis server也在本最小构架中安装在 mainService server上。
+
+
+最小构架中本服务器还承担了静态资源服务器的角色，在网站PV较低时可以胜任，在对网站性能响应要求较高时需单独设立静态资源服务器或购买相关云产品比如oss及cdn。
+
+## mysql server ##
+
+
+
+## messqge queue server ##
+
+
+
+## dataService server ##
+承担所有与数据查询和请求处理等消耗内存性能及io的后台请求。
+
+最小构架中，本服务器还承担着计算诊断接口服务（dataExpert service）的服务器职责，在高可用构架中建议将该职责独立服务器。
+
+最小构架中，本服务器还承担着系统任务（systemTask）的服务器职责，在高可用构架中建议将该职责独立服务器。
+
+systemTask主要做哪些事情？
+---
+
+
+---
+
+## dataDriver server##
+数据驱动服务器是所有外部项目/物联数据的入口接收服务器，这台服务器承担了维护各类项目数据在线和接收的关口重任，对网络带宽要求高，同时需要运行解包服务端程序，需具备容错能力和防止ddos攻击的能力。
+
+
+## dataExpert job server##
+
+
+
+
+## mongo server ##
+
+mongo存储的数据分为两种类型：
+1.项目历史数据，计算及诊断中间数据，log
+
+2.与具体项目无关的配置信息
+
+这两类数据分立为两个mongo实例来存储，方便管理和隔离。
+
+
+# 综上得到的一张最小构架图 #
+
