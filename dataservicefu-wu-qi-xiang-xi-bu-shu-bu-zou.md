@@ -45,7 +45,7 @@ apt-get install gunicorn
 
 # 安装nginx
 
-也是利用nginx + gunicorn + flask 跑生产环境
+利用nginx + gunicorn + flask 跑生产环境
 
 nginx配置如下：
 
@@ -60,20 +60,20 @@ nginx配置如下：
      gzip_types text/plain application/x-javascript application/json text/css application/xml text/javascript application/x-httpd-php image/jpeg image/gif image/png;
      gzip_vary off;
      gzip_disable "MSIE [1-6]\.";
- 
+
      client_max_body_size 20m;
- 
+
      location / {
          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
          proxy_set_header Host $http_host;
          proxy_pass http://127.0.0.1:5000;
- 
+
          client_max_body_size 10m;
          proxy_connect_timeout 600;
          proxy_send_timeout 600;
          proxy_read_timeout 600;
      }
- }                       
+ }
 ```
 
 # RabbitMQ
