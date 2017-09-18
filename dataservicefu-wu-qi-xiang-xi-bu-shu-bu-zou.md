@@ -1,6 +1,8 @@
 # python3.4环境
 
-依赖库（可以用pip3 install  -r requirements.txt 完成安装，被中断后手动修复不能安装的库，便可继续）
+依赖库（将如下列表保存到requirements.txt，然后使用pip3 install  -r requirements.txt 完成安装，被中断后手动修复不能安装的库，便可继续）
+
+
 
 ```
 beautifulsoup4==4.6.0
