@@ -1,6 +1,6 @@
 python3.4
 
-依赖库
+依赖库（可以用pip3 install  -r requirements.txt 完成安装，被中断后手动修复不能安装的库，便可继续）
 
 ```
 beautifulsoup4==4.6.0
@@ -38,7 +38,6 @@ urllib3==1.21.1
 Werkzeug==0.12.2
 xlrd==1.0.0
 xlwt==1.2.0
-
 ```
 
 运行 DataService
