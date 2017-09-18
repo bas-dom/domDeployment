@@ -92,7 +92,7 @@ directoryperdb=true
 
 # 启动
 
-，用mongo命令行设置用户名及密码
+用mongo命令行设置用户名及密码
 
 ```
  #mongod --config /mnt/project/db_hisdata/mongod.conf
