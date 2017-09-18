@@ -1,10 +1,12 @@
+# 环境
+
 windows
+
+# 安装
 
 拷贝 DTUServer.exe文件到D:\om\
 
 配置里需要配 dataService的服务器地址
-
-
 
 # 配置
 
@@ -24,7 +26,5 @@ httpport=5000
 mqip=10.47.192.139
 ```
 
-
-
-运行即可
+运行DtuServer.exe即可
 
