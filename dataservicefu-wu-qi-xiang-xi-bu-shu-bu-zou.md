@@ -26,7 +26,6 @@ paho-mqtt==1.2.3
 pdfkit==0.6.1
 pika==0.10.0
 pymongo==3.4.0
-pywin32==220
 PyYAML==3.12
 redis==2.10.5
 requests==2.18.1
@@ -40,15 +39,9 @@ xlrd==1.0.0
 xlwt==1.2.0
 ```
 
-
-
-
-
 # 安装gunicorn
 
 apt-get install gunicorn
-
-
 
 # 安装nginx
 
@@ -111,15 +104,9 @@ rabbitmq配置文件没有，是默认的。
 
 最后一步：进入网页版的控制中心，将用户权限要设置访问目录/，否则没有权限
 
-
-
 # 下载及运行 DataService
 
 SVN co DataService工程
 
 用config-\*\*.py 覆盖 config.py，确保配置正确
-
-
-
-
 
