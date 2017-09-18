@@ -95,8 +95,8 @@ directoryperdb=true
 用mongo命令行设置用户名及密码
 
 ```
- #mongod --config /mnt/project/db_hisdata/mongod.conf
- #mongod --config /mnt/project/db_configure/mongod.conf
+ #sudo mongod --config /mnt/project/db_hisdata/mongod.conf
+ #sudo mongod --config /mnt/project/db_configure/mongod.conf
 ```
 
 # 用户名密码设置
