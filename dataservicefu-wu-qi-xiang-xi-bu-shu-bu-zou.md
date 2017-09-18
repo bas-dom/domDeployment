@@ -50,7 +50,30 @@ apt-get install gunicorn
 nginx配置如下：
 
 ```
-
+ server {
+     listen 80;
+     gzip on;
+     gzip_min_length 1k;
+     gzip_buffers 4 16k;
+     #gzip_http_version 1.0;
+     gzip_comp_level 2;
+     gzip_types text/plain application/x-javascript application/json text/css application/xml text/javascript application/x-httpd-php image/jpeg image/gif image/png;
+     gzip_vary off;
+     gzip_disable "MSIE [1-6]\.";
+ 
+     client_max_body_size 20m;
+ 
+     location / {
+         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+         proxy_set_header Host $http_host;
+         proxy_pass http://127.0.0.1:5000;
+ 
+         client_max_body_size 10m;
+         proxy_connect_timeout 600;
+         proxy_send_timeout 600;
+         proxy_read_timeout 600;
+     }
+ }                       
 ```
 
 # RabbitMQ
