@@ -4,7 +4,7 @@ windows
 
 # 安装
 
-拷贝 DTUServer.exe文件到D:\om\
+拷贝 DTUServer.exe软件包绿色版文件到D:\om\
 
 配置里需要配 dataService的服务器地址
 
