@@ -1,4 +1,4 @@
-python3.4
+# python3.4环境
 
 依赖库（可以用pip3 install  -r requirements.txt 完成安装，被中断后手动修复不能安装的库，便可继续）
 
@@ -40,19 +40,31 @@ xlrd==1.0.0
 xlwt==1.2.0
 ```
 
-运行 DataService
+
+
+
+
+# 安装gunicorn
+
+apt-get install gunicorn
+
+
+
+# 安装nginx
 
 也是利用nginx + gunicorn + flask 跑生产环境
 
+nginx配置如下：
 
+```
+
+```
 
 # RabbitMQ
 
+apt-get update
 
-
-apt-get update 
-
-apt-get install rabbitmq-server 
+apt-get install rabbitmq-server
 
 创建系统用户：
 
@@ -60,26 +72,22 @@ apt-get install rabbitmq-server
 rabbitmqctl add_user 用户名 密码
 ```
 
-
-
- 设置该用户为administrator角色：
+设置该用户为administrator角色：
 
 ```
 rabbitmqctl set_user_tags 用户名 administrator
 ```
 
-设置权限： 
+设置权限：
 
 ```
 rabbitmqctl set_permissions -p '/' 用户名 '.' '.' '.'
 ```
 
-
-
 重启rabbitmq服务：
 
 ```
-service rabbitmq-server restart 
+service rabbitmq-server restart
 ```
 
 如果需要进行防火墙设置（一般不建议在本机做防火墙，而利用云的自身防火墙设置为佳）：
@@ -87,12 +95,8 @@ service rabbitmq-server restart
 ```
 iptables -A INPUT -p tcp --dport 5672 -j ACCEPT 
 iptables -A INPUT -p tcp --dport 55672 -j ACCEPT 
-iptables -A INPUT -p tcp --dport 15672 -j ACCEPT 
+iptables -A INPUT -p tcp --dport 15672 -j ACCEPT
 ```
-
-
-
-
 
 安装管理控制台插件
 
@@ -101,13 +105,21 @@ rabbitmq-plugins enable rabbitmq_management
 service rabbitmq-server restart
 ```
 
- 
+netstat -ntlp \|grep 5672 看端口是否正常
 
-netstat -ntlp \|grep 5672 看端口是否正常 
-
-rabbitmq配置文件没有，是默认的。 
+rabbitmq配置文件没有，是默认的。
 
 最后一步：进入网页版的控制中心，将用户权限要设置访问目录/，否则没有权限
+
+
+
+# 下载及运行 DataService
+
+SVN co DataService工程
+
+用config-\*\*.py 覆盖 config.py，确保配置正确
+
+
 
 
 
