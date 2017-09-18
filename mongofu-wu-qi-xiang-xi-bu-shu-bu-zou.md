@@ -90,13 +90,24 @@ directoryperdb=true
 
 # 
 
-# 启动
+# 启动和停止
 
 用mongo命令行设置用户名及密码
 
 ```
  #sudo mongod --config /mnt/project/db_hisdata/mongod.conf
  #sudo mongod --config /mnt/project/db_configure/mongod.conf
+ 
+```
+
+停止mongo服务器：
+
+退出方法是命令行登录mongo，然后shutdownServer\(\)
+
+```
+#mongo 127.0.0.1
+#db.shutdownServer()
+
 ```
 
 # 用户名密码设置
