@@ -1,5 +1,3 @@
-
-
 mongo &gt;=3.2
 
 # 历史数据服务\(27017\)配置文件
@@ -44,9 +42,6 @@ wiredTigerDirectoryForIndexes=true
 wiredTigerCollectionBlockCompressor=snappy
 wiredTigerIndexPrefixCompression=true
 directoryperdb=true
-
-
-
 ```
 
 # 配置数据服务器\(27018\)配置文件
@@ -91,8 +86,6 @@ wiredTigerDirectoryForIndexes=true
 wiredTigerCollectionBlockCompressor=snappy
 wiredTigerIndexPrefixCompression=true
 directoryperdb=true
-
-
 ```
 
 # 
@@ -110,20 +103,15 @@ directoryperdb=true
 
 先用无密码模式启动mongod（对应conf文件中 noauth=true）
 
-
-
 ```
-
 #mongo 127.0.0.1
 #use admin
-#db.createUser({})
+#db.createUser({user: "用户名",pwd: "密码",roles: [ { role: "readWriteAnyDatabase", db: "admin" }, { role: "dbOwner", db: "beopdata" }]}) 
 #use beopdata
-#db.createUser({})
+#db.createUser({user: "用户名",pwd: "密码",roles: [ { role: "readWriteAnyDatabase", db: "admin" }, { role: "dbOwner", db: "beopdata" }]})
 ```
 
 # 要在云后台开放防火墙端口\(27017,27018\)
 
 远程用mongochef验证是否连接成功。
-
-
 
