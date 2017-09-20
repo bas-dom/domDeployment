@@ -18,7 +18,9 @@ mysql server高于5.1.6
 
 # nginx安装
 
-配置文件内容：注意其中的dataServiceIP要换为dataService的IP地址
+配置文件一般用/etc/nginx/site-available/default
+
+内容：注意其中的dataServiceIP要换为dataService的IP地址
 
 ```
 server {
@@ -83,7 +85,6 @@ server {
         root /home/eic/mainService/beopWeb/static;
         index index.html index.htm;
         error_page 404 /404.html;
-
 ```
 
 # 
@@ -91,8 +92,6 @@ server {
 # gunicorn安装和配置
 
 配置文件内容：
-
-
 
 # mainService python工程
 
