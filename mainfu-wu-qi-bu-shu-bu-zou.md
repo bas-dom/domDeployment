@@ -4,7 +4,7 @@ pip3安装清单
 
 mysql server高于5.1.6
 
-# redis server
+# redis server安装
 
 要求密码为config.py中相同
 
