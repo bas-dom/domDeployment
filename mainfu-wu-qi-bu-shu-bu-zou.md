@@ -91,7 +91,36 @@ server {
 
 # gunicorn安装和配置
 
+注意：本文件在mainService工程中，原则上不需要再建立，这里列出来，注意其配置。
+
 配置文件内容：
+
+```
+import os
+from  datetime import datetime
+
+import logging
+
+bind='127.0.0.1:9001'
+workers=11
+backlog=2048
+timeout=600
+worker_class="sync" #sync, gevent,meinheld
+debug=True
+proc_name='gunicorn.pid'
+pidfile='/var/log/gunicorn/debug.log'
+loglevel='debug'
+errorlog='/var/log/gunicorn/gunicorn_error_%s.log'%(datetime.now().strftime('%Y-%m-%d-%H-%M'))
+accesslog = '/var/log/gunicorn/gunicorn_access_%s.log'%(datetime.now().strftime('%Y-%m-%d-%H-%M'))
+access_log_format = '%(h)s --%(p)s-- %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"'
+
+logFileName = './log/serverlog%s.txt' % datetime.now().strftime('%Y-%m-%d-%H-%M')
+logging.basicConfig(filename=logFileName, level=logging.ERROR,
+                    format='%(asctime)s --- levelname:%(levelname)s filename: %(filename)s funcName:%(funcName)s '
+                           'outputNumber: [%(lineno)d]  thread: %(threadName)s output msg: %(message)s',
+                    datefmt='[%Y-%m-%d %H:%M:%S]')
+
+```
 
 # mainService python工程
 
