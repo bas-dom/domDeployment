@@ -8,6 +8,14 @@ mysql server高于5.1.6
 
 要求密码为config.py中相同
 
+# MySQL Server安装
+
+5.1.4以上版本
+
+安装后设置用户名密码为配置文件相同
+
+初始化数据库结构，使用beopdoengine.sql和 beopdatabuffer.sql文件导入初始化。
+
 # nginx安装
 
 配置文件内容：
