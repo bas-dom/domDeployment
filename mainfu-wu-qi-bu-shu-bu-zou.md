@@ -16,17 +16,18 @@ mysql server高于5.1.6
 
 开启防火墙的3306端口（使用iptables指令）
 
-由于mysql将3306默认绑定到本地，需要更改my.cnf文件将其配置为监听所有客户端连接，也可以配置为监听指定的ip连接，需要在my.cnf找到bind-address=addr 这一行注释掉或者改为：
+由于mysql将3306默认绑定到本地，需要更改my.cnf文件将其配置为监听所有客户端连接，也可以配置为监听指定的ip连接  
+，需要在my.cnf找到bind-address=addr 这一行注释掉或者改为：
 
 ```
 bind-address=0.0.0.0
 ```
 
-> 参考http://blog.csdn.net/ynnmnm/article/details/45097857
+> 参考[http://blog.csdn.net/ynnmnm/article/details/45097857](http://blog.csdn.net/ynnmnm/article/details/45097857)
 
+配置文件修改后需要重启mysql server
 
-
-初始化数据库结构，使用beopdoengine.sql和 beopdatabuffer.sql文件导入初始化。
+最后一步，初始化数据库结构，使用beopdoengine.sql和 beopdatabuffer.sql文件导入初始化。
 
 # nginx安装
 
