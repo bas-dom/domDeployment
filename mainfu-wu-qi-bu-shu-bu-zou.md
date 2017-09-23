@@ -1,6 +1,11 @@
 # python3.4环境
 
-pip3安装清单
+```
+apt-get update
+apt-get install python3-pip
+```
+
+pip3安装清单\(用pip3 install -r requirement.txt\)
 
 ```
 Flask==0.12.2
@@ -47,7 +52,6 @@ webassets==0.12.1
 wheel==0.24.0
 xlrd==1.0.0
 xlwt==1.2.0
-
 ```
 
 mysql server高于5.1.6
