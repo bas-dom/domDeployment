@@ -66,21 +66,18 @@ sudo apt-get install libpng12-dev
 sudo easy_install matplotlib
 ```
 
-## MySQL connector
+## MySQL connector \(1.2.2\)
 
 ```
-mysql-connector-python==1.2.2
+pip3 install --egg http://dev.mysql.com/get/Downloads/Connector-Python/mysql-connector-python-1.2.2.zip
 ```
-
-
 
 mysql server高于5.1.6
 
 安装中可能遇到的问题：
 
 1. matplot安装失败时，提示要装pkg-config，因此需要去下载pkg-config，并make install
-2. 
-# redis server安装
+2. # redis server安装
 
 要求密码为config.py中相同
 
