@@ -2,6 +2,54 @@
 
 pip3安装清单
 
+```
+Flask==0.12.2
+Flask-Assets==0.12
+Flask-Compress==1.4.0
+Flask-Cors==3.0.2
+Flask-Mail==0.9.1
+Flask-SocketIO==2.8.6
+Jinja2==2.9.6
+MarkupSafe==1.0
+Pillow==4.1.1
+Werkzeug==0.12.2
+XlsxWriter==0.9.6
+blinker==1.4
+chardet==2.2.1
+click==6.7
+colorama==0.2.5
+configobj==5.0.6
+cycler==0.10.0
+gunicorn==19.7.1
+html5lib==0.999
+imgkit==0.1.7
+itsdangerous==0.24
+lxml==3.3.3
+matplotlib==2.0.2
+mysql-connector-python==1.2.2
+numpy==1.12.1
+olefile==0.44
+pdfkit==0.6.1
+pymongo==3.4.0
+pyparsing==2.2.0
+python-dateutil==2.6.1
+python-docx==0.8.6
+python-engineio==1.5.4
+python-socketio==1.7.5
+pytz==2017.2
+redis==2.10.5
+requests==2.2.1
+six==1.10.0
+tablib==0.11.4
+ufw==0.34-rc-0ubuntu2
+urllib3==1.7.1
+webassets==0.12.1
+wheel==0.24.0
+xlrd==1.0.0
+xlwt==1.2.0
+
+```
+
 mysql server高于5.1.6
 
 # redis server安装
