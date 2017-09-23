@@ -5,7 +5,9 @@ apt-get update
 apt-get install python3-pip
 ```
 
-pip3安装清单（先将如下清单保存为requirement.txt，再用pip3 install -r requirement.txt）
+## pip3安装基础库清单
+
+先将如下清单保存为requirement.txt，再用pip3 install -r requirement.txt
 
 ```
 Flask==0.12.2
@@ -31,7 +33,6 @@ imgkit==0.1.7
 itsdangerous==0.24
 lxml==3.3.3
 matplotlib==2.0.2
-mysql-connector-python==1.2.2
 numpy==1.12.1
 olefile==0.44
 pdfkit==0.6.1
@@ -54,8 +55,31 @@ xlrd==1.0.0
 xlwt==1.2.0
 ```
 
+## matplotlib库安装
+
+```
+sudo easy_install numpy
+sudo easy_install tornado
+sudo easy_install pyparsing
+sudo apt-get install libfreetype6
+sudo apt-get install libpng12-dev
+sudo easy_install matplotlib
+```
+
+## MySQL connector
+
+```
+mysql-connector-python==1.2.2
+```
+
+
+
 mysql server高于5.1.6
 
+安装中可能遇到的问题：
+
+1. matplot安装失败时，提示要装pkg-config，因此需要去下载pkg-config，并make install
+2. 
 # redis server安装
 
 要求密码为config.py中相同
