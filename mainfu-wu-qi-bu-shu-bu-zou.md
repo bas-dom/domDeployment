@@ -5,7 +5,7 @@ apt-get update
 apt-get install python3-pip
 ```
 
-pip3安装清单\(用pip3 install -r requirement.txt\)
+pip3安装清单（先将如下清单保存为requirement.txt，再用pip3 install -r requirement.txt）
 
 ```
 Flask==0.12.2
