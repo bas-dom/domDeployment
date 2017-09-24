@@ -76,7 +76,11 @@ nginx配置如下：
  }
 ```
 
-# 
+# 设置防火墙
+
+腾讯云中安全组中打开
+
+本地用ufw enable ，ufw allow命令打开，或者直接用iptables命令打开
 
 # 下载及运行 DataService
 
