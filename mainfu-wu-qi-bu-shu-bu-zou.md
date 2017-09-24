@@ -120,6 +120,10 @@ sudo pip install pillow
 
 要求密码为config.py中相同
 
+```
+redis-server /etc/redis/redis.conf &
+```
+
 # MySQL Server安装
 
 ## 清除旧版本
