@@ -37,14 +37,12 @@ gunicorn==19.7.1
 html5lib==0.999
 imgkit==0.1.7
 itsdangerous==0.24
-lxml==3.3.3
 numpy==1.12.1
 olefile==0.44
 pdfkit==0.6.1
 pymongo==3.4.0
 pyparsing==2.2.0
 python-dateutil==2.6.1
-python-docx==0.8.6
 python-engineio==1.5.4
 python-socketio==1.7.5
 pytz==2017.2
@@ -99,6 +97,14 @@ apt-get install libxml2-dev libxslt-dev python-dev
 sudo pip install lxml
 ```
 
+## Python-docx
+
+下载tar.gz后，解压，用python setup.py install安装，必须在lxml安装成功后做这一步
+
+```
+
+```
+
 ## pillow
 
 由于依赖很多系统库，需要先安装系统库后再pip install pillow
@@ -115,6 +121,32 @@ sudo pip install pillow
 要求密码为config.py中相同
 
 # MySQL Server安装
+
+## 清除旧版本
+
+删除mysql
+
+```
+1.sudo apt-get autoremove --purge mysql-server-5.5
+
+2.sudo apt-get remove mysql-common
+```
+
+清理残留数据
+
+```
+dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P
+```
+
+重新安装mysql
+
+```
+1.sudo apt-get install mysql-server
+
+2.sudo apt-get install mysql-client
+
+3.sudo apt-get install php5-mysql
+```
 
 5.1.4以上版本
 
