@@ -121,7 +121,7 @@ sudo pip install pillow
 要求密码为config.py中相同
 
 ```
-redis-server /etc/redis/redis.conf &
+redis-server /etc/redis/redis.conf &
 ```
 
 # MySQL Server安装
@@ -169,7 +169,23 @@ bind-address=0.0.0.0
 
 配置文件修改后需要重启mysql server
 
+安装apache
+
+  端口设置到8080，避免与nginx冲突
+
+安装 php5
+
+
+
+安装phMyAdmin 网页管理终端
+
+
+
 最后一步，初始化数据库结构，使用beopdoengine.sql和 beopdatabuffer.sql文件导入初始化。
+
+创建用户
+
+  用户名自定义，建议用mainuser，密码自定义与config相匹配即可。
 
 # nginx安装
 
@@ -240,6 +256,7 @@ server {
         root /home/eic/mainService/beopWeb/static;
         index index.html index.htm;
         error_page 404 /404.html;
+        }
 ```
 
 # 
@@ -287,4 +304,10 @@ config都必须使用config-om.py（内部所有配置指向需用相应服务�
 source .runserver.sh
 
 service nginx restart
+
+测试成功的方法：
+
+浏览器访问：http://MAIN\_IP/api/updateProjectInfo，网页显示True
+
+
 
