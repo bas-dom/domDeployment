@@ -25,7 +25,6 @@ Flask-Mail==0.9.1
 Flask-SocketIO==2.8.6
 Jinja2==2.9.6
 MarkupSafe==1.0
-Pillow==4.1.1
 Werkzeug==0.12.2
 XlsxWriter==0.9.6
 blinker==1.4
@@ -39,7 +38,6 @@ html5lib==0.999
 imgkit==0.1.7
 itsdangerous==0.24
 lxml==3.3.3
-matplotlib==2.0.2
 numpy==1.12.1
 olefile==0.44
 pdfkit==0.6.1
@@ -86,15 +84,30 @@ wget ftp://139.196.7.223/matplotlib-1.4.3.tar.gz
 sudo tar zxvf matplotlib-1.4.3.tar.gz
 cd matplotlib-1.4.3
 sudo python setup.py install
-
 ```
-
-
 
 ## MySQL connector \(1.2.2\)
 
 ```
 pip3 install --egg http://dev.mysql.com/get/Downloads/Connector-Python/mysql-connector-python-1.2.2.zip
+```
+
+## lxml
+
+```
+apt-get install libxml2-dev libxslt-dev python-dev
+sudo pip install lxml
+```
+
+## pillow
+
+由于依赖很多系统库，需要先安装系统库后再pip install pillow
+
+```
+sudo apt-get install libtiff5-dev libjpeg8-dev zlib1g-dev \
+libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk
+
+sudo pip install pillow
 ```
 
 # redis server安装
