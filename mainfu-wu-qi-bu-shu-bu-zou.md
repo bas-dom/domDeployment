@@ -1,5 +1,14 @@
 # python3.4环境
 
+先将python默认指向到3.4而不是2.7 （有的系统默认在/usr/bin/python3.4，需用whereis python3.4确认）
+
+```
+sudo rm /usr/bin/python
+sudo ln -s /usr/local/bin/python3.4 /usr/bin/python
+```
+
+
+
 ```
 apt-get update
 apt-get install python3-pip
@@ -62,6 +71,7 @@ sudo easy_install numpy
 sudo easy_install tornado
 sudo easy_install pyparsing
 sudo apt-get install libfreetype6
+sudo apt-get install libfreetype6-dev
 sudo apt-get install libpng12-dev
 sudo easy_install matplotlib
 ```
@@ -71,8 +81,6 @@ sudo easy_install matplotlib
 ```
 pip3 install --egg http://dev.mysql.com/get/Downloads/Connector-Python/mysql-connector-python-1.2.2.zip
 ```
-
-
 
 # redis server安装
 
