@@ -171,21 +171,17 @@ bind-address=0.0.0.0
 
 安装apache
 
-  端口设置到8080，避免与nginx冲突
+端口设置到8080，避免与nginx冲突
 
 安装 php5
 
-
-
 安装phMyAdmin 网页管理终端
-
-
 
 最后一步，初始化数据库结构，使用beopdoengine.sql和 beopdatabuffer.sql文件导入初始化。
 
 创建用户
 
-  用户名自定义，建议用mainuser，密码自定义与config相匹配即可。
+用户名自定义，建议用mainuser，密码自定义与config相匹配即可。
 
 # nginx安装
 
@@ -307,7 +303,5 @@ service nginx restart
 
 测试成功的方法：
 
-浏览器访问：http://MAIN\_IP/api/updateProjectInfo，网页显示True
-
-
+浏览器访问：[http://MAIN\_IP/api/updateProjectInfo，网页显示Tr](http://MAIN_IP/api/updateProjectInfo，网页显示True)ue则表示成功。
 
