@@ -7,8 +7,6 @@ sudo rm /usr/bin/python
 sudo ln -s /usr/local/bin/python3.4 /usr/bin/python
 ```
 
-
-
 ```
 apt-get update
 apt-get install python3-pip
@@ -66,15 +64,32 @@ xlwt==1.2.0
 
 ## matplotlib库安装
 
+先安装freetype（下载后用make）,参考：[http://blog.csdn.net/caiyunfreedom/article/details/46545685](http://blog.csdn.net/caiyunfreedom/article/details/46545685)
+
 ```
-sudo easy_install numpy
-sudo easy_install tornado
-sudo easy_install pyparsing
-sudo apt-get install libfreetype6
-sudo apt-get install libfreetype6-dev
-sudo apt-get install libpng12-dev
-sudo easy_install matplotlib
+sudo wget ftp://139.196.7.223/pkgconfig-0.17.2.tar.bz2
+sudo tar jxvf pkgconfig-0.17.2.tar.bz2
+cd pkgconfig-0.17.2
+sudo ./configure
+sudo make
+sudo make install
+
+wget ftp://139.196.7.223/freetype-2.4.0.tar.bz2
+sudo tar jxvf freetype-2.4.0.tar.bz2
+cd freetype-2.4.0
+sudo ./configure
+sudo make
+sudo make install
+
+
+wget ftp://139.196.7.223/matplotlib-1.4.3.tar.gz
+sudo tar zxvf matplotlib-1.4.3.tar.gz
+cd matplotlib-1.4.3
+sudo python setup.py install
+
 ```
+
+
 
 ## MySQL connector \(1.2.2\)
 
