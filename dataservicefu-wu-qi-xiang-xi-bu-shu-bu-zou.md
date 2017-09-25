@@ -43,13 +43,11 @@ xlwt==1.2.0
 
 html5lib：这个如果不装的话，很多api实时运行时就会有error
 
-
-
 ## phantomjs
 
 这个如果不装的话，很多api实时运行时就会有error
 
-1.下载tar包 Wget[https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86\_64.tar.bz2](https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2)
+1.下载tar包 wget [https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86\_64.tar.bz2](https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2)
 
 2.解压tar包 tar jxvf phantomjs-2.1.1-linux-x86\_64.tar.bz2
 
@@ -57,7 +55,7 @@ html5lib：这个如果不装的话，很多api实时运行时就会有error
 
 4.生成快捷命令 ln -sf /usr/local/src/phantomjs/bin/phantomjs /usr/local/bin/phantomjs
 
-5.终端输入 Phantomjs –version查看是否安装成功
+5.终端输入 phantomjs –version查看是否安装成功
 
 # 安装gunicorn
 
