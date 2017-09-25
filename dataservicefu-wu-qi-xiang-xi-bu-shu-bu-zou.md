@@ -39,6 +39,12 @@ xlrd==1.0.0
 xlwt==1.2.0
 ```
 
+# 注意：容易遗漏不影响启动但影响策略api的安装库
+
+html5lib
+
+phantomjs
+
 # 安装gunicorn
 
 apt-get install gunicorn
