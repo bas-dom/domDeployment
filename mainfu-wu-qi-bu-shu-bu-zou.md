@@ -305,3 +305,11 @@ service nginx restart
 
 浏览器访问：[http://MAIN\_IP/api/updateProjectInfo，网页显示Tr](http://MAIN_IP/api/updateProjectInfo，网页显示True)ue则表示成功。
 
+更新代码或补丁包后的重启方法是重启gunicorn对应的父进程（注意PPID是gunicorn对应的）
+
+```
+sudo kill -HUP [PPID]
+```
+
+重启后需确认PPID发生变化且进程数量正确表示成功。
+
