@@ -311,5 +311,5 @@ service nginx restart
 sudo kill -HUP [PPID]
 ```
 
-重启后需确认PPID发生变化且进程数量正确表示成功。
+重启后需确认PID发生变化且进程数量正确表示成功。
 
