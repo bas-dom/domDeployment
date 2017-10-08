@@ -43,6 +43,8 @@ xlwt==1.2.0
 
 html5lib：这个如果不装的话，很多api实时运行时就会有error
 
+lxml：也要装上，否则也会报实时的意外
+
 ## phantomjs
 
 这个如果不装的话，很多api实时运行时就会有error
