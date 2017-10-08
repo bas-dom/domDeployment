@@ -2,11 +2,11 @@
 
 与dataService基本相同，需要numpy库。
 
-
-
 # 注意：容易遗漏不影响启动但影响策略api的安装库
 
 html5lib：这个如果不装的话，很多api实时运行时就会有error
+
+lxml：容易遗漏，实时会报出意外
 
 phantomjs：这个如果不装的话，很多api实时运行时就会有error
 
