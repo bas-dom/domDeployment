@@ -313,7 +313,7 @@ sudo kill -HUP [PPID]
 
 重启后需确认PID发生变化且进程数量正确表示成功。
 
-# OM-Lab打包上线步骤
+# OM-Lab前端代码打包上线步骤
 
 在本地运行命令构建发布包：
 
@@ -329,7 +329,7 @@ npm run build
 
 SSH登录服务器ubuntu@119.29.61.31,密码：------, 在/home/mainService/beopWeb/static目录下，下载上一步的压缩包，并解压到对应的omlab和omview文件里，并将app.html改名为index.html
 
-# OM-View打包上线步骤
+# OM-View前端代码打包上线步骤
 
 与omlab类似，只是压缩包解压到static/omview中
 
@@ -342,6 +342,8 @@ SSH登录服务器ubuntu@119.29.61.31,密码：------, 在/home/mainService/beop
 ```
 kill -NOHUP PPID
 ```
+
+
 
 
 
