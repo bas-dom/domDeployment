@@ -59,7 +59,7 @@ lxml：也要装上，否则也会报实时的意外
 
 5.终端输入 phantomjs –version查看是否安装成功
 
-# 安装gunicorn
+# 安装和配置gunicorn
 
 apt-get install gunicorn
 
@@ -95,6 +95,8 @@ nginx配置如下：
      }
  }
 ```
+
+# 
 
 # 设置防火墙
 
